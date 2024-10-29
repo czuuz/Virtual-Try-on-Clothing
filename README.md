@@ -12,7 +12,7 @@
 ### 链接
 [腾讯文档动态视频关键词链接](https://docs.qq.com/sheet/DQlpYSUhRWEV5Q3JF?tab=BB08J2)
 [交大云盘链接](https://jbox.sjtu.edu.cn/l/w1UsNG)
-【腾讯文档】静态数据处理分工链接(https://docs.qq.com/sheet/DQlVQUG1obk9BRkV1)
+[腾讯文档静态数据处理分工链接](https://docs.qq.com/sheet/DQlVQUG1obk9BRkV1)
 ### 要求/标准
 #TODO：对上传数据格式、关键词、去重、clip标准之类的要求和建议
 1. 文件中有三条注释，分别是要求大家去调整自己想爬取的关键词，视频时长过滤，爬取页数
