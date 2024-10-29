@@ -3,9 +3,34 @@
 #一页笔记太小，放不下太多内容，请尽量使用\[link text](https:// "title")的语法引入新建的CodiMD链接，或者：“\<details>
 \<summary>显示的内容\</summary>要隐藏的内容” 的语法
 
+## 项目
+建议：请在每个模块下的README.md文件中说明该模块的使用方式，包括必要的环境配置、权重的下载、源代码的github仓库。提供注释
 
-
+项目结构如下：
+├── README.md  
+│  
+├── CLIP  
+│     
+├── SAM     
+│     
+├── YOLO     
+│         
+├── mmpose #或者openpose  
+│   
+│  
+└── video #动态配准的处理  
+│     └── crawler.py #爬虫脚本  
+│  
+└── utils.py  
 ## 进度安排
+
+## 静态配准
+
+### 用到的技术：
+#### YOLO目标检测
+#### SAM分割
+#### CLIP
+#### 人体姿态估计(Openpose)
 
 ## 动态配准
 
@@ -46,10 +71,4 @@
 - 视频播放链接（重复）：https://www.douyin.com/aweme/v1/play/?video_id=v0300fg10000cse88v7og65semb4jlr0&line=0&file_id=5a45e8bc193843f697b7f3f23139a7e5&sign=fec0201c2a5626354fde00330306b7e4&is_play_url=1&source=PackSourceEnum_SEARCH
 </details>
 
-## 静态配准
 
-### 用到的技术：
-#### YOLO目标检测
-#### SAM分割
-#### CLIP
-#### 人体姿态估计(Openpose)
