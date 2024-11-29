@@ -1,1 +1,1 @@
-递交单独的那个test文件，它是正式的
+单独的那个test_formal_construction文件，它是正式使用的，用它替换掉原本文件夹中的test_pic.py
