@@ -5,3 +5,26 @@
 set up the enviornment accordingly to this website https://mmpose.readthedocs.io/en/latest/installation.html
 
 Acquire ckpt for mmpose via https://github.com/open-mmlab/mmpose/tree/main/projects/rtmo and put it in `./ckpt`
+代码使用只需要将test_formal_save_construction.py文件中的
+image_folder_path = './washed'  # 图片所在文件夹路径
+修改为想要清洗的图片文件夹即可
+
+按照流程，接受的图片文件夹数据格式如下：
+/夹克
+|---488...（一组图片的标号）
+|   |---clothes
+|   |---person
+|---4798...(另一组)
+
+处理筛选得到正面朝向的穿衣模特图，最终保存的结果形式如下示例：
+/output（eg:夹克）
+|---488...（一组图片的标号）
+|   |---clothes
+|   |---person
+|   |   |---output_entire
+|   |   |---output_half
+|   |   |---output_noface_half
+|   |   |---output_noface_entire
+|---4798...(另一组)
+
+所分的四类为：output_entire————全身正面朝向图； output_half————上半身正面朝向图；  output_noface_half————无人脸上半身正面朝向图；  output_noface_entire————无人脸全身正面朝向图
