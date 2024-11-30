@@ -5,3 +5,5 @@ CLIP任务中共有两个代码文件：
 test_for_clothes_person2.py用于形成garment-person对，结果的json文件保存在total_results_clothes文件夹中。
 
 test_for_person_person2.py用于形成person-person对，结果的json文件保存在total_results_person文件夹中。
+
+代码主要调用了clip模型的权重 以及增加了一个颜色对比模块 来最终决定两张图片的相似分数。
