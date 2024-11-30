@@ -1,1 +1,7 @@
+本代码在SAM处理完成后的文件夹上继续进行处理，接受SAM处理后的图像文件夹，输出经过特征比对后的garment-person对和person-person对。garment-person对和person-person对以json脚本的方式存储在total_results_clothes和total_results_person中，每个类别下的每个组都包含一个json脚本。
 
+CLIP任务中共有两个代码文件：
+
+test_for_clothes_person2.py用于形成garment-person对，结果的json文件保存在total_results_clothes文件夹中。
+
+test_for_person_person2.py用于形成person-person对，结果的json文件保存在total_results_person文件夹中。
