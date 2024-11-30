@@ -1,6 +1,6 @@
 本代码在SAM处理完成后的文件夹上继续进行处理，接受SAM处理后的图像文件夹，输出经过特征比对后的garment-person对和person-person对。garment-person对和person-person对以json脚本的方式存储在total_results_clothes和total_results_person中，每个类别下的每个组都包含一个json脚本。
 
-所需要的库是代码中所要求的一些python的基础库。运行代码只需要python + 对应代码
+所需要的库是代码中所要求的一些python的基础库。运行代码只需要python + 对应代码,运行代码后会自动下载clip相关模型权重。
 
 接受输入格式为：
 ```
