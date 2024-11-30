@@ -5,9 +5,8 @@
 set up the enviornment accordingly to this website https://mmpose.readthedocs.io/en/latest/installation.html
 
 Acquire ckpt for mmpose via https://github.com/open-mmlab/mmpose/tree/main/projects/rtmo and put it in `./ckpt`
-代码使用只需要将test_formal_save_construction.py文件中的
-image_folder_path = './washed'  # 图片所在文件夹路径
-修改为想要清洗的图片文件夹即可
+
+代码使用只需要将test_formal_save_construction.py文件中的image_folder_path = './washed'  # 图片所在文件夹路径修改为想要清洗的图片文件夹即可
 
 按照流程，接受的图片文件夹数据格式如下：
 ```
