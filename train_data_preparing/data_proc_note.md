@@ -1,5 +1,5 @@
 ## 前言
-数据从这里下载`https://jbox.sjtu.edu.cn/v/link/view/2d27f13e43f4491a9aa0c9ed11f63dcb`
+下面用到的数据从这个交大云盘下载`https://jbox.sjtu.edu.cn/v/link/view/2d27f13e43f4491a9aa0c9ed11f63dcb`
 
 以下的代码均在windows11上进行测试，如有问题欢迎随时联系我，不遵循下面的指示后果自负  
 主要参考来自于`https://github.com/sangyun884/HR-VITON/issues/45`
@@ -9,6 +9,27 @@
 - 请切记命名规范，参考`MLdata/train`文件夹下，不要自作主张修改文件夹的名字，更不要修改图片的名字，否则就白做了
 - 务必新开环境，否则后果自负
 - 有任何问题都可以问我，最好在群里提出，因为大家可能都有这个问题
+
+解压完文件后，应该如此安排文件位置：
+```python
+MLdata
+|_ train_ image #人
+       |_ cloth #衣服
+```
+github中包含了处理数据的示例，可以参考
+### 数据处理步骤
+共50000张人物图片，10000张衣服图片
+分为
+- openpose #3人 配置环境非常简单，2秒一张图片
+- human-parse #2人，可能在windows高版本的nvcc上跑不了，需要linux服务器环境
+- dense-pose #2人
+- cloth mask #1人，处理衣服的，上面三个是处理人的
+上面的都是独立进行的，互不依赖
+- parse agnostic #这部分不需要，删去
+- human agnostic #依赖上面的前三项
+- agnostic_mask #依赖上一项
+这两个都不需要太多算力，我自己来试试
+
 
 ## openpose
 使用windows portable version,必须下载交大云盘的openpose并解压，因为它的模型死活下载不了（如果你自己能搞定也可以）  
@@ -38,11 +59,11 @@ pip install scipy==1.7.3 opencv-python==4.5.5.62 protobuf==3.19.1 Pillow==9.0.1 
 cd storage/DL_lib/CIHP_PGN-master/CIHP_PGN-master #进入CIHP_PGN目录
 # 建立从data/image路径到 CIHP_PGN-master/datasets/images路径的软链接
 MKLINK /D "G:/storage/DL_lib/CIHP_PGN-master/CIHP_PGN-master/datasets/images" "F:/datasets/virtual_tryon/MLdata/train/image"
-linux是： ln -s CIHP_PGN-master/CIHP_PGN-master/datasets/images  virtual_tryon/MLdata/train/image #请修改为你的
+linux是： ln -s /lustre/home/acct-stu/stu234/machine_learning/MLdata/train/image /lustre/home/acct-stu/stu234/machine_learning/human_parse/CIHP_PGN-master/datasets/images #请修改为你的，使用相对路径可能会报错
 
 # 建立模型权重的软链接，CIHP_pgn为权重
 MKLINK /D "G:/storage/DL_lib/CIHP_PGN-master/CIHP_PGN-master/checkpoint" "G:/storage/DL_lib/CIHP_pgn/CIHP_pgn"
-linux是： ln -s CIHP_PGN-master/CIHP_PGN-master/checkpoint     CIHP_pgn/CIHP_pgn #请修改为你的
+linux是： ln -s /lustre/home/acct-stu/stu234/machine_learning/human_parse/CIHP_pgn /lustre/home/acct-stu/stu234/machine_learning/human_parse/CIHP_PGN-master/checkpoint      #请修改为你的，使用相对路径可能会报错
 
 python inf_pgn.py
 # 我在windows跑不起来
