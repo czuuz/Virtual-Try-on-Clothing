@@ -1,0 +1,16 @@
+requests>=2.31.0
+# torch>=2.2.2
+Pillow>=10.3.0
+typing>=3.7.4.3
+# torchvision>=0.17.2
+opencv-python>=4.9.0.80
+numpy>=1.26.4
+loguru>=0.7.2
+uvicorn>=0.29.0
+fastapi>=0.110.1
+pydantic>=2.6.4
+click>=8.1.7
+tqdm>=4.66.2
+setuptools>=69.2.0
+aiofiles>=23.2.1
+python-multipart>=0.0.9
