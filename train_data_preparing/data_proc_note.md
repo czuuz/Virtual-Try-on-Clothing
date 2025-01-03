@@ -1,4 +1,6 @@
 ## 前言
+数据从这里下载`https://jbox.sjtu.edu.cn/v/link/view/2d27f13e43f4491a9aa0c9ed11f63dcb`
+
 以下的代码均在windows11上进行测试，如有问题欢迎随时联系我，不遵循下面的指示后果自负  
 主要参考来自于`https://github.com/sangyun884/HR-VITON/issues/45`
 
@@ -127,3 +129,7 @@ python parse_agnostic.py
 python human_agnostic.py
 ```
 得到agnostic-v3.2
+
+## agnostic_mask
+TODO  
+得到agnostic-mask
