@@ -42,16 +42,20 @@ interface = init_interface(config)
 
 imgs = []
 root = r"F:\datasets\virtual_tryon\MLdata\train\cloth"   #'./train/cloth'
-for name in os.listdir(root):
-    imgs.append(root + '/' + name)
 
-images = interface(imgs)
-for i, im in enumerate(images):
-    img = np.array(im)
-    img = img[...,:3] # no transparency
-    idx = (img[...,0]==130)&(img[...,1]==130)&(img[...,2]==130) # background 0 or 130, just try it
-    img = np.ones(idx.shape)*255
-    img[idx] = 0
-    im = Image.fromarray(np.uint8(img), 'L')
-    im.save(f'F:/datasets/virtual_tryon/MLdata/train/cloth-mask/{imgs[i].split("/")[-1].split(".")[0]}.jpg')
-    #im.save(f'./train/cloth_mask/{imgs[i].split("/")[-1].split(".")[0]}.jpg')
+total_files = os.listdir(root)
+
+for batch_file_names in [total_files[i:i+10] for i in range(0, len(total_files), 10)]:
+    for name in batch_file_names:
+        imgs.append(root + '/' + name)
+
+    images = interface(imgs)
+    for i, im in enumerate(images):
+        img = np.array(im)
+        img = img[...,:3] # no transparency
+        idx = (img[...,0]==130)&(img[...,1]==130)&(img[...,2]==130) # background 0 or 130, just try it
+        img = np.ones(idx.shape)*255
+        img[idx] = 0
+        im = Image.fromarray(np.uint8(img), 'L')
+        im.save(f'F:/datasets/virtual_tryon/MLdata/train/cloth-mask/{imgs[i].split("/")[-1].split(".")[0]}.jpg')
+        #im.save(f'./train/cloth_mask/{imgs[i].split("/")[-1].split(".")[0]}.jpg')
