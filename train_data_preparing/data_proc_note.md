@@ -50,10 +50,17 @@ bin\OpenPoseDemo.exe --image_dir F:\datasets\virtual_tryon\MLdata\train\image  -
 
 windows与linux服务器版本
 ```bash
-conda create -n tf python=3.7
+conda create -n tf python=3.8
 conda activate tf
+
+conda install cudatoolkit=11.2.1 cudnn=8.1.0
+pip install nvidia-pyindex
+pip install nvidia-tensorflow[horovod](30系以后显卡用这个)
+
 conda install -c conda-forge cudatoolkit=10.0 cudnn=7.6.5
-pip install tensorflow-gpu==1.15
+pip install tensorflow-gpu==1.15（30系以前显卡才能用）
+
+
 pip install scipy==1.7.3 opencv-python==4.5.5.62 protobuf==3.19.1 Pillow==9.0.1 matplotlib==3.5.1
 
 cd storage/DL_lib/CIHP_PGN-master/CIHP_PGN-master #进入CIHP_PGN目录
