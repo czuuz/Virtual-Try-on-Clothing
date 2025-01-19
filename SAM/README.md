@@ -23,4 +23,6 @@ pip install opencv-python pycocotools matplotlib onnxruntime onnx
 
 ## 文件位置设置
 将12行的checkpoint_path换成自己的模型路径
+
+
 将28~30行的file_root_person，file_root_clothes，output_root换为对应自己的数据路径
