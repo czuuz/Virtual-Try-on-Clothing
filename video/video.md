@@ -9,7 +9,18 @@ pip install -r requirements.txt
 pip install accelerate==0.21.0
 ```
 ## pose_videos
-<table class="center">
-    <tr><td><video controls autoplay loop src="https://github.com/czuuz/Virtual-Try-on-Clothing/blob/main/video/anyone-video-2_kps.mp4">Pos 1</video></td></tr>
-    <tr><td><video controls autoplay loop src="https://github.com/czuuz/Virtual-Try-on-Clothing/blob/main/video/anyone-video-5_kps.mp4">Pose 2</video></td></tr>
-</table>
+```shell
+./anyone-video-2_kps.mp4
+./anyone-video-5_kps.mp4
+```
+## 准备
+获得预训练权重
+```shell
+python tools/download_weights.py
+```
+将data的jpq转换为png，修改`./configs/prompts/animation.yaml`
+
+## run
+```shell
+python -m scripts.pose2vid --config ./configs/prompts/animation.yaml -W 512 -H 784 -L 64
+```
