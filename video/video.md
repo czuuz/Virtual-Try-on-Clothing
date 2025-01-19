@@ -18,7 +18,7 @@ pip install accelerate==0.21.0
 ```shell
 python tools/download_weights.py
 ```
-将data转换为png格式放到./configs/inference/ref_images，对应修改`./configs/prompts/animation.yaml`内容
+将data转换为png格式放到`./configs/inference/ref_images`，对应修改`./configs/prompts/animation.yaml`内容
 
 ## run
 ```shell
