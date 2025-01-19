@@ -24,3 +24,6 @@ python tools/download_weights.py
 ```shell
 python -m scripts.pose2vid --config ./configs/prompts/animation.yaml -W 512 -H 784 -L 64
 ```
+
+## 结果
+https://jbox.sjtu.edu.cn/l/j1iDSG
