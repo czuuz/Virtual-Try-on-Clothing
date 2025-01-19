@@ -31,3 +31,5 @@ Acquire ckpt for mmpose via https://github.com/open-mmlab/mmpose/tree/main/proje
 ```
 
 所分的四类为：output_entire————全身正面朝向图； output_half————上半身正面朝向图；  output_noface_half————无人脸上半身正面朝向图；  output_noface_entire————无人脸全身正面朝向图
+
+另外那个process_clips_ver2.py是用于处理视频的openpose代码，作为动态配准部分平替原本test_formal_construction的视频帧处理代码。运行它即可处理你所写的视频文件夹里的所有视频，提取最佳帧
