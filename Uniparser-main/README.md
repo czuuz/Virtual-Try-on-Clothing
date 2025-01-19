@@ -1,4 +1,4 @@
-#文件位置
+# 文件位置
 ./demo/inference_demo_parsing.py是我们预处理用的程序，环境安装和模型下载如以下官方文档所示
 修改其中data_root，checkpoint_file为自己的数据与模型所在的实际路径
 
