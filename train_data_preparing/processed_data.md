@@ -6,7 +6,7 @@
 - person-cloth是我们这个作业额外加上的任务，它相当于cloth。为了与之前预训练时保持一致，助教建议从person身上抠出来cloth作为条件输入，而不是把整个人的图片输入进去。
 - garment-person.txt相当于viton_hd中train.txt和test.txt的合体，没有区分训练还是测试，如果需要，可以先shuffle，再按百分比取出。每一行的左边是衣服，右边是人
 - person_pair.json是person-person对的信息，之所以没有整理为garment-person.txt的格式，是因为person-person的排列组合太多，把数据集相应扩大了好几倍。训练的同学可以自行决定如何设置pair.txt的格式。
-每一个列表的人物图片都是相似的
+每一个列表的人物图片都是相似的  
 此外，助教的原话是“鲤鱼:
 person_person应该有两个视角的人
 
